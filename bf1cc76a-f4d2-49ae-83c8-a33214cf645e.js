@@ -11,7 +11,7 @@ const STEPS = [
     kicker: "First thing",
     title: "Set up a free custodial account.",
     est: "~10 min",
-    lead: "You need a place for the Trump Account money to land. The kind you want is called a custodial account — an investment account in your kid's name that you manage until they're grown. Vanguard, Fidelity, and Schwab all do them for free.",
+    lead: "You need a place for the Account money to land. The kind you want is called a custodial account — an investment account in your kid's name that you manage until they're grown. Vanguard, Fidelity, and Schwab all do them for free.",
     tasks: [
       { id: "pick",   t: "Pick a provider: Vanguard, Fidelity, or Schwab.",        h: "Any of the three works. They're all free, all have the funds you need, and you can switch later if you change your mind." },
       { id: "gather", t: "Grab the docs you'll need.",                              h: "Your kid's Social Security card, a photo of their birth certificate, your driver's license, and the routing/account number from your checking account." },
