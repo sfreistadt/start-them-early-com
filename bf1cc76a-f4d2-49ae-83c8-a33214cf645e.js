@@ -9,9 +9,9 @@ const STEPS = [
     klass: "s1",
     n: 1,
     kicker: "First thing",
-    title: "Set up a free account.",
+    title: "Set up a free custodial account.",
     est: "~10 min",
-    lead: "You need a place for the money to land. The kind you want is called a custodial account — an investment account in your kid's name that you manage until they're grown. Vanguard, Fidelity, and Schwab all do them for free.",
+    lead: "You need a place for the Trump Account money to land. The kind you want is called a custodial account — an investment account in your kid's name that you manage until they're grown. Vanguard, Fidelity, and Schwab all do them for free.",
     tasks: [
       { id: "pick",   t: "Pick a provider: Vanguard, Fidelity, or Schwab.",        h: "Any of the three works. They're all free, all have the funds you need, and you can switch later if you change your mind." },
       { id: "gather", t: "Grab the docs you'll need.",                              h: "Your kid's Social Security card, a photo of their birth certificate, your driver's license, and the routing/account number from your checking account." },
@@ -28,14 +28,14 @@ const STEPS = [
     klass: "s2",
     n: 2,
     kicker: "Next up",
-    title: "Tell the government where to send it.",
+    title: "File Form 4547 with your tax return.",
     est: "~10 min",
-    lead: "The $1,000 doesn't just appear — you have to ask for it. You fill out a short form on a federal website with your kid's info and the new account number, then wait a few weeks for the deposit to show up.",
+    lead: "The $1,000 Trump Account contribution doesn't just appear — you have to claim it. You'll file Form 4547 (Trump Account Election) with your 2025 tax return. Your kid must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.",
     tasks: [
-      { id: "portal",  t: "Go straight to irs.gov or treasury.gov.",                h: "Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one." },
-      { id: "form",    t: "Fill out: kid's SSN, your tax info, new account number.", h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere." },
-      { id: "submit",  t: "Submit and screenshot the confirmation.",                 h: "You'll get a confirmation number. Take a screenshot of it — you may need it if anything goes sideways." },
-      { id: "wait",    t: "Wait 2 to 6 weeks for the cash to land.",                  h: "It shows up as plain cash in your brokerage account. Don't panic if it takes the full six weeks — that's normal." },
+      { id: "portal",  t: "Go to trumpaccounts.gov or irs.gov for Form 4547.",        h: "Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one. The official form is Form 4547, Trump Account Election(s)." },
+      { id: "form",    t: "Fill out Form 4547: kid's SSN, account number from Step 1.", h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere. You'll submit this with your tax return." },
+      { id: "submit",  t: "File Form 4547 with your 2025 tax return.",                 h: "You can include it when you file your taxes. Keep a copy of the confirmation — you may need it if anything goes sideways." },
+      { id: "wait",    t: "Wait 2 to 6 weeks for the $1,000 to land.",                  h: "The Treasury will deposit $1,000 into your Trump Account. It shows up as plain cash in your brokerage account. Don't panic if it takes the full six weeks — that's normal." },
     ],
     heads: {
       label: "Watch out",
@@ -243,11 +243,11 @@ function Growth({ rate }) {
 
 function FAQ() {
   const items = [
-    { q: "Does my kid have to be a US citizen?", a: "Yes. The deposit is for kids with a valid Social Security number whose parents file US taxes. Check the program's official rules on irs.gov for the exact birth-date cutoffs." },
-    { q: "I already have a 529 plan for college. Do I still need this?", a: "Yes — they're different. A 529 is for college costs. The federal $1,000 lives in a separate custodial brokerage account that your kid can use for anything once they're an adult. Both can coexist happily." },
+    { q: "Does my kid have to be a US citizen?", a: "Yes. The Trump Account pilot program is for U.S. citizen children born between Jan 1, 2025 and Dec 31, 2028, with a valid Social Security number. Check trumpaccounts.gov or irs.gov for complete eligibility rules." },
+    { q: "I already have a 529 plan for college. Do I still need this?", a: "Yes — they're different. A 529 is for college costs. The Trump Account $1,000 lives in a separate custodial brokerage account that your kid can use for anything once they're an adult. Both can coexist happily." },
     { q: "Will my kid owe taxes on this?", a: "Probably not for years. The $1,000 itself isn't taxable. Future gains and dividends fall under the \"kiddie tax\" rules, but the first ~$1,300 of investment income a year is tax-free. Most families won't bump into a tax bill until the account is much bigger." },
-    { q: "Can I put more money in?", a: "Absolutely. After the account is open, you can add cash anytime and buy more shares of the same fund. $25/month from grandparents at every birthday adds up to real money by the time your kid is 18." },
-    { q: "What if I miss the deadline to claim?", a: "Check irs.gov for the current cutoff. Even if you miss the federal $1,000, opening the custodial account and contributing what you can is still a great move — you're giving your kid an 18-year head start." },
+    { q: "Can I put more money in?", a: "Absolutely. Contributions to Trump Accounts can be made starting July 4, 2026. After the account is open, you can add cash anytime and buy more shares of the same fund. $25/month from grandparents at every birthday adds up to real money by the time your kid is 18." },
+    { q: "What if I miss the deadline to claim?", a: "Form 4547 must be filed with your 2025 tax return to claim the $1,000. Check trumpaccounts.gov or irs.gov for the current deadline. Even if you miss the federal $1,000, opening the custodial account and contributing what you can is still a great move — you're giving your kid an 18-year head start." },
     { q: "Why not just stick it in a savings account?", a: "Over 18 years, a high-yield savings account at ~4% turns $1,000 into about $2,000. A stock index fund at ~7% turns it into about $3,400. The gap gets even bigger the longer you wait." },
     { q: "What if the stock market crashes?", a: "It will, multiple times, over the next 18 years. That's normal — markets recover and grow over long stretches. The worst move is selling during a crash. The best move is doing nothing." },
   ];
@@ -358,7 +358,7 @@ function App() {
             Here's how to claim it.
           </h1>
           <p className="lede">
-            The federal government will deposit <strong>$1,000</strong> into an investment account for every new American child — but only if you set it up.
+            The federal government will deposit <strong>$1,000</strong> into a Trump Account for every eligible American child born 2025–2028 — but only if you set it up.
             This guide walks you through it in three steps. About thirty minutes total. Zero fees if you do it right.
           </p>
           <div className="quickfacts">
@@ -382,11 +382,12 @@ function App() {
         <div className="blurb">
           <h2>Wait — what is this, actually?</h2>
           <p>
-            The government is giving every new kid a thousand-dollar head start. Real money, deposited into an investment account in your kid's name.
+            The Trump Account pilot program gives eligible kids a thousand-dollar head start. Real money, deposited into a tax-advantaged investment account (called a Trump Account) in your kid's name.
+            Eligibility: your child must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.
             But <strong>it doesn't just appear</strong> — no check in the mail, no automatic transfer. You have to do three things to claim it.
           </p>
           <p>
-            Skip any step and the money either doesn't show up, or it sits as cash earning nothing for 18 years. This guide is the no-jargon version: <strong>open the account, claim the money, invest it</strong>. That's it.
+            Skip any step and the money either doesn't show up, or it sits as cash earning nothing for 18 years. This guide is the no-jargon version: <strong>open the account, file Form 4547, invest it</strong>. That's it.
           </p>
         </div>
 
