@@ -35,7 +35,7 @@ const STEPS = [
       { id: "portal",  t: "Go to trumpaccounts.gov or irs.gov for Form 4547.",        h: "Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one. The official form is Form 4547, Trump Account Election(s)." },
       { id: "form",    t: "Fill out Form 4547: kid's SSN, account number from Step 1.", h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere. You'll submit this with your tax return." },
       { id: "submit",  t: "File Form 4547 with your 2025 tax return.",                 h: "You can include it when you file your taxes. Keep a copy of the confirmation — you may need it if anything goes sideways." },
-      { id: "wait",    t: "Wait 2 to 6 weeks for the $1,000 to land.",                  h: "The Treasury will deposit $1,000 into your Trump Account. It shows up as plain cash in your brokerage account. Don't panic if it takes the full six weeks — that's normal." },
+      { id: "wait",    t: "Wait 2 to 6 weeks for the $1,000 to land.",                  h: "The Treasury will deposit $1,000 into your Account. It shows up as plain cash in your brokerage account. Don't panic if it takes the full six weeks — that's normal." },
     ],
     heads: {
       label: "Watch out",
