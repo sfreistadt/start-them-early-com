@@ -30,7 +30,7 @@ const STEPS = [
     kicker: "Next up",
     title: "File Form 4547 with your tax return.",
     est: "~10 min",
-    lead: "The $1,000 Trump Account contribution doesn't just appear — you have to claim it. You'll file Form 4547 (Trump Account Election) with your 2025 tax return. Your kid must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.",
+    lead: "The $1,000 Account contribution doesn't just appear — you have to claim it. You'll file Form 4547 (Trump Account Election) with your 2025 tax return. Your kid must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.",
     tasks: [
       { id: "portal",  t: "Go to trumpaccounts.gov or irs.gov for Form 4547.",        h: "Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one. The official form is Form 4547, Trump Account Election(s)." },
       { id: "form",    t: "Fill out Form 4547: kid's SSN, account number from Step 1.", h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere. You'll submit this with your tax return." },
