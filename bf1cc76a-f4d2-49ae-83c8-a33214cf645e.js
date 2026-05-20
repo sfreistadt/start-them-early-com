@@ -340,6 +340,15 @@ function App() {
           download
           className="pdf-btn"
           aria-label="Download PDF"
+          onClick={() => {
+            if (window.gtag) {
+              window.gtag('event', 'file_download', {
+                file_name: 'StartThemEarlyCheatSheet.pdf',
+                file_type: 'pdf',
+                link_text: 'Download PDF'
+              });
+            }
+          }}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M7 1V9M7 9L3.5 5.5M7 9L10.5 5.5M1.5 11.5V12.5C1.5 12.78 1.72 13 2 13H12C12.28 13 12.5 12.78 12.5 12.5V11.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
