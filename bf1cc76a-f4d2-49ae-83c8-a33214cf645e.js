@@ -290,7 +290,6 @@ function App() {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
     catch (_) { return {}; }
   });
-  const [showPdfHelp, setShowPdfHelp] = useState(false);
   const [tweaks, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
 
   useEffect(() => { applyMood(tweaks.mood); }, [tweaks.mood]);
@@ -310,14 +309,6 @@ function App() {
 
   const reset = () => {
     if (confirm("Uncheck everything?")) setChecked({});
-  };
-
-  const saveAsPdf = () => {
-    // Open all FAQ details so they print
-    document.querySelectorAll("details").forEach((d) => d.setAttribute("open", ""));
-    // Close the help popover first so it doesn't briefly flash in the print preview
-    setShowPdfHelp(false);
-    setTimeout(() => window.print(), 80);
   };
 
   const T = window.TweaksPanel;
@@ -344,35 +335,17 @@ function App() {
           ))}
         </div>
         <span className="count">{totalChecked} / {totalTasks}</span>
-        <button
+        <a
+          href="StartThemEarlyCheatSheet.pdf"
+          download
           className="pdf-btn"
-          onClick={() => setShowPdfHelp((v) => !v)}
-          aria-label="Save as PDF"
+          aria-label="Download PDF"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M7 1V9M7 9L3.5 5.5M7 9L10.5 5.5M1.5 11.5V12.5C1.5 12.78 1.72 13 2 13H12C12.28 13 12.5 12.78 12.5 12.5V11.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Save as PDF
-        </button>
-        {showPdfHelp && (
-          <div className="pdf-help">
-            <button className="x" onClick={() => setShowPdfHelp(false)} aria-label="Close">×</button>
-            <b>Save this guide as a PDF</b>
-            <ol>
-              <li>Click <strong>Print this guide</strong> below.</li>
-              <li>In the print dialog that opens, change <strong>Destination</strong> to <strong>Save as PDF</strong>.</li>
-              <li>Turn on <strong>Background graphics</strong> so the colors print.</li>
-              <li>Click <strong>Save</strong>.</li>
-            </ol>
-            <button
-              className="pdf-btn"
-              style={{ marginTop: 12, width: "100%", justifyContent: "center" }}
-              onClick={saveAsPdf}
-            >
-              Print this guide →
-            </button>
-          </div>
-        )}
+          Download PDF
+        </a>
       </div>
 
       <div className="wrap">
