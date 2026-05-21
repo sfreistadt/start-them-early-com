@@ -28,13 +28,13 @@ const STEPS = [
     klass: "s2",
     n: 2,
     kicker: "Next up",
-    title: "File Form 4547 with your tax return.",
+    title: <>File <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a> with your tax return.</>,
     est: "~10 min",
-    lead: "The $1,000 Account contribution doesn't just appear — you have to claim it. You'll file Form 4547 (Trump Account Election) with your 2025 tax return. Your kid must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.",
+    lead: <>The $1,000 Account contribution doesn't just appear — you have to claim it. You'll file <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a> (Trump Account Election) with your 2025 tax return. Your kid must be born between Jan 1, 2025 and Dec 31, 2028, and be a U.S. citizen with a valid Social Security number.</>,
     tasks: [
-      { id: "portal",  t: "Go to trumpaccounts.gov or irs.gov for Form 4547.",        h: "Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one. The official form is Form 4547, Trump Account Election(s)." },
-      { id: "form",    t: "Fill out Form 4547: kid's SSN, account number from Step 1.", h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere. You'll submit this with your tax return." },
-      { id: "submit",  t: "File Form 4547 with your 2025 tax return.",                 h: "You can include it when you file your taxes. Keep a copy of the confirmation — you may need it if anything goes sideways." },
+      { id: "portal",  t: <>Go to trumpaccounts.gov or irs.gov for <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a>.</>,        h: <>Type it in yourself — don't click links from texts, emails, or social posts. Scammers love this one. The official form is <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a>, Trump Account Election(s).</> },
+      { id: "form",    t: <>Fill out <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a>: kid's SSN, account number from Step 1.</>, h: "The account number is from Step 1 — copy and paste it carefully. One wrong digit and the money goes nowhere. You'll submit this with your tax return." },
+      { id: "submit",  t: <>File <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a> with your 2025 tax return.</>,                 h: "You can include it when you file your taxes. Keep a copy of the confirmation — you may need it if anything goes sideways." },
       { id: "wait",    t: "Wait 2 to 6 weeks for the $1,000 to land.",                  h: "The Treasury will deposit $1,000 into your Account. It shows up as plain cash in your brokerage account. Don't panic if it takes the full six weeks — that's normal." },
     ],
     heads: {
@@ -247,7 +247,7 @@ function FAQ() {
     { q: "I already have a 529 plan for college. Do I still need this?", a: "Yes — they're different. A 529 is for college costs. The Trump Account $1,000 lives in a separate custodial brokerage account that your kid can use for anything once they're an adult. Both can coexist happily." },
     { q: "Will my kid owe taxes on this?", a: "Probably not for years. The $1,000 itself isn't taxable. Future gains and dividends fall under the \"kiddie tax\" rules, but the first ~$1,300 of investment income a year is tax-free. Most families won't bump into a tax bill until the account is much bigger." },
     { q: "Can I put more money in?", a: "Absolutely. Contributions to Accounts can be made starting July 4, 2026. After the account is open, you can add cash anytime and buy more shares of the same fund. $25/month from grandparents at every birthday adds up to real money by the time your kid is 18." },
-    { q: "What if I miss the deadline to claim?", a: "Form 4547 must be filed with your 2025 tax return to claim the $1,000. Check trumpaccounts.gov or irs.gov for the current deadline. Even if you miss the federal $1,000, opening the custodial account and contributing what you can is still a great move — you're giving your kid an 18-year head start." },
+    { q: "What if I miss the deadline to claim?", a: <><a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a> must be filed with your 2025 tax return to claim the $1,000. Check trumpaccounts.gov or irs.gov for the current deadline. Even if you miss the federal $1,000, opening the custodial account and contributing what you can is still a great move — you're giving your kid an 18-year head start.</> },
     { q: "Why not just stick it in a savings account?", a: "Over 18 years, a high-yield savings account at ~4% turns $1,000 into about $2,000. A stock index fund at ~7% turns it into about $3,400. The gap gets even bigger the longer you wait." },
     { q: "What if the stock market crashes?", a: "It will, multiple times, over the next 18 years. That's normal — markets recover and grow over long stretches. The worst move is selling during a crash. The best move is doing nothing." },
   ];
@@ -396,7 +396,7 @@ function App() {
             But <strong>it doesn't just appear</strong> — no check in the mail, no automatic transfer. You have to do three things to claim it.
           </p>
           <p>
-            Skip any step and the money either doesn't show up, or it sits as cash earning nothing for 18 years. This guide is the no-jargon version: <strong>open the account, file Form 4547, invest it</strong>. That's it.
+            Skip any step and the money either doesn't show up, or it sits as cash earning nothing for 18 years. This guide is the no-jargon version: <strong>open the account, file <a href="https://www.irs.gov/pub/irs-pdf/f4547.pdf" target="_blank" rel="noopener noreferrer">Form 4547</a>, invest it</strong>. That's it.
           </p>
         </div>
 

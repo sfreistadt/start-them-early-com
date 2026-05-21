@@ -313,6 +313,20 @@
   }
   .mono { font-family: "DM Mono", ui-monospace, monospace; }
 
+  a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    transition: color 140ms ease;
+  }
+  a:hover {
+    color: var(--blue);
+  }
+  .strong a, strong a {
+    font-weight: 700;
+  }
+
   /* ─── Top progress strip ─── */
   .topbar {
     position: sticky; top: 0; z-index: 10;
