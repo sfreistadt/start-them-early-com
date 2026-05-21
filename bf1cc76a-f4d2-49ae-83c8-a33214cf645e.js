@@ -14,7 +14,7 @@ const STEPS = [
     lead: "You need a place for the Account money to land. The kind you want is called a custodial account — an investment account in your kid's name that you manage until they're grown. Vanguard, Fidelity, and Schwab all do them for free.",
     tasks: [
       { id: "pick",   t: "Pick a provider: Vanguard, Fidelity, or Schwab.",        h: "Any of the three works. They're all free, all have the funds you need, and you can switch later if you change your mind." },
-      { id: "gather", t: "Grab the docs you'll need.",                              h: "Your kid's Social Security card, a photo of their birth certificate, your driver's license, and the routing/account number from your checking account." },
+      { id: "gather", t: "Grab the docs you'll need.",                              h: "• Your kid's Social Security card\n• A photo of their birth certificate\n• Your driver's license\n• The routing/account number from your checking account" },
       { id: "open",   t: "On the site, choose \"Custodial\" or \"UTMA\".",         h: "You'll be listed as the custodian (the grown-up); your kid is the beneficiary (the one who gets the money). The signup is about 15 questions." },
       { id: "link",   t: "Link your bank account (optional).",                      h: "Skip this if you just want the $1,000. Add it if you might toss in extra cash later — even $20/month makes a big difference over 18 years." },
     ],
