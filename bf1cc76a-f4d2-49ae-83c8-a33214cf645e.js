@@ -49,18 +49,21 @@ const STEPS = [
     kicker: "The important one",
     title: "Buy ONE thing and you're done.",
     est: "~5 min",
-    lead: "Cash sitting in the account does nothing — it just slowly loses to inflation. To make the $1,000 actually grow, you're going to buy one thing: an index fund. It holds tiny slices of every big American company. Then you walk away for 18 years.",
+    lead: "Cash sitting in the account does nothing — it just slowly loses to inflation. To make the $1,000 actually grow, you're going to buy one thing: a low-cost index fund that tracks a broad market. Then you walk away for 18 years.",
     tasks: [
       { id: "login",   t: "Log in and find your cash balance.",            h: "It should say something like \"$1,000.00 settled cash\" near the top of your account screen." },
-      { id: "search",  t: "Type \"VTI\" in the search bar and click it.",  h: "VTI is the ticker symbol — like a barcode for a fund. (Other safe picks below if you'd rather.)" },
+      { id: "search",  t: "Type \"VTI\" in the search bar and click it.",  h: "VTI is the ticker symbol — like a barcode for a fund. (Other options below if you'd rather.)" },
       { id: "buy",     t: "Hit Buy, enter $1,000, and submit the order.",  h: "It'll let you choose between dollars and shares — pick dollars. The trade goes through within a business day or two." },
       { id: "reinv",   t: "Turn on automatic dividend reinvestment.",      h: "Usually a checkbox in account settings called \"DRIP\" or \"Reinvest Dividends.\" It rolls every payout back into the fund automatically." },
       { id: "calendar",t: "Set a yearly reminder. Then forget about it.",   h: "Seriously. Check it once a year, on a quiet weekend, and otherwise leave it alone. Touching it more often will only hurt." },
     ],
-    recommend: { ticker: "VTI", name: "Vanguard Total Stock Market", fee: "0.03%", feeLabel: "yearly fee" },
+    recommend: { ticker: "VTI", name: "Vanguard Total Stock Market", fee: "0.03%", feeLabel: "yearly fee", perf3y: "~9%", feeOn1k: "$0.30/yr" },
     alt: [
-      { ticker: "VT",  fee: "0.07%", note: "Adds world stocks" },
-      { ticker: "VOO", fee: "0.03%", note: "S&P 500 only" },
+      { ticker: "VT",   fee: "0.07%", note: "Adds world stocks", perf3y: "~8%", feeOn1k: "$0.70/yr" },
+      { ticker: "VOO",  fee: "0.03%", note: "S&P 500 only", perf3y: "~10%", feeOn1k: "$0.30/yr" },
+      { ticker: "VXUS", fee: "0.07%", note: "International stocks", perf3y: "~6%", feeOn1k: "$0.70/yr" },
+      { ticker: "ITOT", fee: "0.03%", note: "iShares total market", perf3y: "~9%", feeOn1k: "$0.30/yr" },
+      { ticker: "SCHB", fee: "0.03%", note: "Schwab broad market", perf3y: "~9%", feeOn1k: "$0.30/yr" },
     ],
     heads: {
       label: "Why this fund?",
@@ -158,23 +161,38 @@ function Section({ step, checked, toggle }) {
 
         {step.recommend && (
           <>
-            <div className="recommend">
-              <div>
-                <div className="lbl">Buy this one</div>
-                <div className="ticker">{step.recommend.ticker}</div>
-                <div className="fname">{step.recommend.name}</div>
+            <div className="etf-table">
+              <div className="etf-table-header">
+                <div className="col-ticker">Fund</div>
+                <div className="col-perf">3-yr return</div>
+                <div className="col-fee">Expense ratio</div>
+                <div className="col-cost">Fee on $1,000</div>
               </div>
-              <div className="fee">
-                <div className="v">{step.recommend.fee}</div>
-                <div className="l">{step.recommend.feeLabel}</div>
+
+              <div className="etf-row recommended">
+                <div className="col-ticker">
+                  <div className="ticker">{step.recommend.ticker}</div>
+                  <div className="fname">{step.recommend.name}</div>
+                  <div className="badge">Recommended</div>
+                </div>
+                <div className="col-perf">{step.recommend.perf3y}</div>
+                <div className="col-fee">{step.recommend.fee}</div>
+                <div className="col-cost">{step.recommend.feeOn1k}</div>
               </div>
-            </div>
-            <div className="alt-funds">
-              <span className="l">Or instead:</span>
+
               {step.alt.map((a) => (
-                <span key={a.ticker} className="alt">{a.ticker}<span>{a.note} · {a.fee}</span></span>
+                <div key={a.ticker} className="etf-row">
+                  <div className="col-ticker">
+                    <div className="ticker">{a.ticker}</div>
+                    <div className="fname">{a.note}</div>
+                  </div>
+                  <div className="col-perf">{a.perf3y}</div>
+                  <div className="col-fee">{a.fee}</div>
+                  <div className="col-cost">{a.feeOn1k}</div>
+                </div>
               ))}
             </div>
+            <p className="perf-note">Past performance doesn't guarantee future results. Returns are approximate annualized averages. Source: <a href="https://www.bogleheads.org/wiki/ETFs_for_Bogleheads" target="_blank" rel="noopener noreferrer">Bogleheads ETF Guide</a></p>
           </>
         )}
 
