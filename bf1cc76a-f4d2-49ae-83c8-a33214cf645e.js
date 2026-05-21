@@ -52,7 +52,7 @@ const STEPS = [
     lead: "Cash sitting in the account does nothing — it just slowly loses to inflation. To make the $1,000 actually grow, you're going to buy one thing: a low-cost index fund that tracks a broad market. Then you walk away for 18 years.",
     tasks: [
       { id: "login",   t: "Log in and find your cash balance.",            h: "It should say something like \"$1,000.00 settled cash\" near the top of your account screen." },
-      { id: "search",  t: "Type \"VTI\" in the search bar and click it.",  h: "VTI is the ticker symbol — like a barcode for a fund. (Other options below if you'd rather.)" },
+      { id: "search",  t: "Pick a fund from the table above and search for its ticker.",  h: "Type the ticker symbol in your brokerage's search bar — it's like a barcode for the fund. VTI is recommended, but any from the table works." },
       { id: "buy",     t: "Hit Buy, enter $1,000, and submit the order.",  h: "It'll let you choose between dollars and shares — pick dollars. The trade goes through within a business day or two." },
       { id: "reinv",   t: "Turn on automatic dividend reinvestment.",      h: "Usually a checkbox in account settings called \"DRIP\" or \"Reinvest Dividends.\" It rolls every payout back into the fund automatically." },
       { id: "calendar",t: "Set a yearly reminder. Then forget about it.",   h: "Seriously. Check it once a year, on a quiet weekend, and otherwise leave it alone. Touching it more often will only hurt." },
