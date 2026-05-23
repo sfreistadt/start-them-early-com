@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.start-them-early.com/sitemap.xml
+
+# Block any admin or form processing pages
+Disallow: /admin/
+Disallow: /api/
